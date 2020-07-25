@@ -1,0 +1,69 @@
+.about-me 
+  margin: 0 0 140px
+  @media (max-width: $md2)
+    margin: 0 0 90px
+  @media (max-width: $md3)
+    margin: 0 0 40px
+  @media (max-width: $md4)
+    margin: 0 0 20px
+
+.about-me__inner 
+  display: flex
+  @media (max-width: $md1)
+    align-items: center
+  @media (max-width: $md2)
+    flex-flow: column wrap 
+
+.about-me__img 
+  flex: 0 0 542px
+  height: 606px
+  img 
+    max-width: 100%
+  @media (max-width: $md1)
+    flex: 0 0 400px
+    height: auto
+  @media (max-width: $md2)
+    display: none
+
+.about-me__text 
+  flex: 1
+  padding: 60px 0 37px 37px
+  display: flex
+  flex-flow: column nowrap
+  @media (max-width: $md3)
+    padding: 20px
+
+.about-me__title 
+  color: #2b2a2c
+  font-size: 45px
+  font-weight: 700
+  text-transform: uppercase
+  span 
+    color: #dedede
+    font-size: 92px
+    font-weight: 700
+    text-transform: uppercase
+    display: block
+    margin: 10px 0 30px
+  @media (max-width: $md1)
+    font-size: 40px
+    span 
+      font-size: 75px
+  @media (max-width: $md3)
+    font-size: 30px
+    span 
+      font-size: 60px
+  @media (max-width: $md4)
+    font-size: 25px
+    span 
+      font-size: 45px
+
+.about-me__paragraph 
+  color: #717072
+  font-size: 12px
+  font-weight: 300
+  line-height: 2
+  flex: 1 0 auto
+  margin: 0 0 20px
+
+

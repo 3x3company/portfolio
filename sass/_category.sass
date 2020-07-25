@@ -1,0 +1,119 @@
+.category 
+  background: white
+
+.category__inner 
+
+.category__nav 
+  margin: 0 0 36px
+  display: flex
+  justify-content: center
+
+.category__nav-item
+  color: #6a696b
+  font-size: 12px
+  background: white
+  text-transform: capitalize
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    bottom: -3px
+    left: 0
+    height: 1px
+    width: 100%
+    background: coral
+    opacity: 0
+  &:not(:last-child)
+    margin: 0 30px 0 0
+    
+.category__nav-item.active
+  color: coral
+  &:after 
+    opacity: 1
+
+.category__row 
+  display: flex
+  flex-flow: row wrap 
+  margin: 0 -15px
+  @media (max-width: $md2)
+    justify-content: center 
+
+.category__unit 
+  flex: 0 0 33.333%
+  padding: 0 15px
+  @media (max-width: $md2)
+    flex: 0 0 50%
+  @media (max-width: $md3)
+    flex: 0 0 80%
+
+.category__unit-inner 
+  box-shadow: 1px 1px 10px 3px #eeeeee
+  border-radius: 10px
+  overflow: hidden
+  margin: 0 0 30px
+  @media (min-width: 992.98px)
+    &:hover
+      transform: scale(1.01)
+      transition: all .3s linear
+
+.category__unit-img 
+  width: 100%
+  height: 300px
+  position: relative
+  background: #eeeeee
+  img 
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: contain
+
+.category__unit-text 
+  background: white
+  padding: 19px 20px 15px 13px
+
+.category__unit-label 
+  color: #2b2a2c
+  font-size: 12px
+  text-transform: uppercase
+  letter-spacing: 0.6px
+  margin: 0 0 15px
+  span 
+    font-weight: 700
+    color: coral
+
+.category__unit-title 
+  display: inline-block
+  a 
+    color: #2b2a2c
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+
+.category__unit-date 
+  display: inline-block
+  color: #2b2a2c
+  font-size: 16px
+  font-weight: 700
+  float: right
+
+.link__unit 
+  margin: 12px 0 127px
+  text-align: center
+
+.link__item 
+  display: inline-block
+  color: #2b2a2c
+  font-size: 14px
+  font-weight: 700
+  text-transform: uppercase
+  letter-spacing: 0.7px
+  padding: 1em 1.5em
+  border: 2px solid black
+  border-radius: 2em
+  @media (min-width: 992.98px)
+    &:hover
+      background: black 
+      color: white 
+      transition: all .3s linear

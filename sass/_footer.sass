@@ -1,0 +1,74 @@
+.footer 
+  background: black
+  @media (max-width: $md2)
+    padding: 20px
+
+.footer__inner 
+  min-height: 62px
+  display: flex 
+  justify-content: space-between
+  align-items: center
+  @media (max-width: $md2)
+    flex-flow: row wrap 
+    justify-content: center 
+
+.footer__text 
+  display: flex
+  align-items: center
+  @media (max-width: $md2)
+    order: 2
+  @media (max-width: $md4)
+    flex-flow: column-reverse wrap
+
+.footer__copy 
+  color: #8d8d8e
+  font-size: 14px
+  margin: 0 31px 0 0
+  @media (max-width: $md4)
+    margin: 0
+
+.footer__social 
+  display: flex
+  align-items: center
+  @media (max-width: $md4)
+    margin: 0 0 10px
+
+.footer__social-item:not(:last-child)
+  margin: 0 16px 0 0
+  @media (max-width: $md3)
+    margin: 0 10px 0 0
+
+.footer__nav 
+  display: flex
+  align-items: center
+  @media (max-width: $md2)
+    order: 1
+    margin: 0 0 20px
+  @media (max-width: 400px)
+    flex: 0 0 100%
+    flex-flow: column-reverse
+
+.footer__nav-item
+  color: #8d8d8e
+  font-size: 14px
+  margin: 0 20px 0 0
+  text-transform: capitalize
+  @media (min-width: 992.98px)
+    &:hover
+      text-decoration: underline
+  @media (max-width: $md3)
+    margin: 0 10px 0 0
+  @media (max-width: 400px)
+    margin: 15px 0 0
+
+.footer__nav-item--btn 
+  margin: 0
+  background: none
+  border: 1px solid #8d8d8e
+  padding: .4em 1.5em
+  border-radius: 20px
+  @media (min-width: 992.98px)
+    &:hover
+      background: white 
+      color: black
+      transition: all .3s linear

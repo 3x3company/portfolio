@@ -1,0 +1,158 @@
+.header 
+  padding: 12px 0
+  position: fixed
+  z-index: 100
+  width: 100%
+  &:after
+    content: ''
+    height: 100%
+    width: 100%
+    background: coral//#eeeeee
+    position: absolute 
+    top: 0
+    left: 0
+    z-index: 5
+  @media (max-width: $md3)
+    padding: 10px 0
+    &:after 
+      height: 70px
+
+.header__inner 
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.header__logo 
+  display: flex
+  align-items: center
+  position: relative
+  z-index: 6
+
+.header__logo-img 
+  width: 55px
+  height: 55px
+  border-radius: 50%
+  overflow: hidden 
+  margin: 0 14px 0 0
+  border: 2px solid yellow
+  img 
+    width: 100%
+    height: 100%
+    object-fit: cover
+  @media (max-width: $md3)
+    width: 50px
+    height: 50px
+
+.header__logo-name 
+  color: #2b2a2c
+  font-size: 16px
+  font-weight: 700
+  margin: 0 0 7px
+  line-height: 0.94
+
+.header__logo-profession 
+  color: white
+  font-size: 12px
+
+.header__burger 
+  display: none
+  @media (max-width: $md3)
+    display: block
+    width: 30px
+    height: 20px
+    position: relative
+    z-index: 6
+    &:before, &:after, span 
+      content: ' '
+      position: absolute 
+      left: 0
+      height: 2px
+      width: 100%
+      background: black
+      border-radius: 5px
+    &:before 
+      top: 0
+    span 
+      top: 50% 
+      transform: translateY(-50%)
+    &:after 
+      bottom: 0
+   
+.header__burger.active
+  span 
+    display: none
+  &:before
+    top: 9px 
+    transform: rotate(45deg)
+  &:after 
+    bottom: 9px
+    transform: rotate(-45deg)
+
+.header__menu 
+  display: flex
+  align-items: center
+  position: relative
+  z-index: 6
+  @media (max-width: $md3)
+    position: fixed 
+    top: 0
+    right: -100%
+    width: 100%
+    height: 100%
+    z-index: 5
+    background: rgba(0, 0, 0, .8)
+    flex-direction: column-reverse
+    justify-content: center
+    transition: all .3s linear
+
+.header__menu.active 
+  transform: translateX(-100%)
+
+.header__menu-item 
+  color: #2b2a2c
+  font-size: 14px
+  font-weight: 700
+  text-transform: uppercase
+  letter-spacing: 0.7px
+  position: relative
+  &:not(:first-child)
+    margin: 0 0 0 40px
+  &:not(:last-child)
+    &:after
+      content: ''
+      height: 3px
+      width: 0
+      background: #2b2a2c
+      position: absolute 
+      bottom: -8px
+      left: 50%
+      transform: translateX(-50%)
+      transition: all .2s linear
+      border-radius: 3px
+  @media (min-width: 992.98px)
+    &:hover
+      &:after
+        width: 100%
+  @media (max-width: $md2)
+    &:not(:first-child)
+      margin: 0 0 0 20px
+  @media (max-width: $md3)
+    color: white
+    margin: 0 0 25px !important
+    font-size: 20px
+
+.header__menu
+  .header__menu-item--last
+    margin: 0 0 0 34px 
+    padding: .7em 2.2em
+    border: 2px solid #2b2a2c
+    border-radius: 2em
+    background: white
+    @media (min-width: 992.98px)
+      &:hover
+        background: black
+        color: white
+        transition: all .3s linear
+    @media (max-width: $md3)
+      color: black
+      margin: 0
