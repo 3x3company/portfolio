@@ -6,6 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/index.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="script/slick.min.js"></script>
+	<script src="script/index.js"></script>
 </head>
 
 <body>
@@ -32,7 +35,7 @@
 					<a href="#" title="about me" class="header__menu-item">about me</a>
 					<a href="#" title="blog" class="header__menu-item">blog</a>
 					<a href="#" title="contact" class="header__menu-item">contact</a>
-					<button class="header__menu-item header__menu-item--last">hire me</button>
+					<button data-modal="#m-gallery" class="header__menu-item header__menu-item--last">hire me</button>
 				</nav>
 			</div>
 		</header>
@@ -62,8 +65,8 @@
 						</a>
 					</div>
 					<div class="intro__btn-unit">
-						<button class="btn btn--hire">hire me</button>
-						<button class="btn">see my resume</button>
+						<button data-modal="#m-gallery" class="btn btn--hire">hire me</button>
+						<button data-modal="#m-resume" class="btn">see my resume</button>
 					</div>
 				</div>
 			</section>
@@ -230,8 +233,8 @@
 							viverra, quam non imperdiet scelerisque, urna nunc consequat velit, in mollis erat nibh in libero.
 						</p>
 						<div class="intro__btn-unit">
-							<button class="btn btn--hire">hire me</button>
-							<button class="btn">see my resume</button>
+							<button data-modal="#m-gallery" class="btn btn--hire">hire me</button>
+							<button data-modal="#m-resume" class="btn">see my resume</button>
 						</div>
 					</div>
 				</div>
@@ -374,13 +377,162 @@
 					<a href="#" class="footer__nav-item" target="_blank">about me</a>
 					<a href="#" class="footer__nav-item" target="_blank">blog</a>
 					<a href="#" class="footer__nav-item" target="_blank">contact</a>
-					<button class="footer__nav-item footer__nav-item--btn">hire me</button>
+					<button data-modal="#m-gallery" class="footer__nav-item footer__nav-item--btn">hire me</button>
 				</nav>
 			</div>
 		</footer>
-		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-		<script src="script/slick.min.js"></script>
-		<script src="script/index.js"></script>
+	</div>
+	<div class="m-gallery modal" id="m-gallery">
+		<div class="m-gallery__inner">
+			<div class="m-gallery__unit">
+				<div class="m-gallery__img-box">
+					<div class="m-gallery__img-slider">
+						<div class="m-gallery__img-slider-item">
+							<img src="images/m-gallery/p1.jpg" alt="">
+						</div>
+						<div class="m-gallery__img-slider-item">
+							<img src="images/m-gallery/p2.jpg" alt="">
+						</div>
+						<div class="m-gallery__img-slider-item">
+							<img src="images/m-gallery/p3.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="m-gallery__text-box">
+					<div class="m-gallery__close-btn" data-close="">
+						<img width="25px" src="images/m-gallery/icons/exit.svg" alt="">
+					</div>
+					<h2 class="m-gallery__box-title">project title</h2>
+					<div class="m-gallery__box-subtitle">category <span>2018</span></div>
+					<div class="m-gallery__box-client">client:</div>
+					<div class="m-gallery__box-client-value">creative agency</div>
+					<div class="m-gallery__box-text">
+						<p>
+							Lore, consequatur reprehenderit culpa magnam reiciendis odio, iusto quia vero quos, eius debitis
+						</p>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, dignissimos reprehenderit exercitationem
+							labore assumenda voluptatibus non maxime atque ipsum fugit quas voluptatem, placeat esse facilis
+						</p>
+					</div>
+					<div class="m-gallery__box-btn">
+						<button class="m-gallery__box-btn-item m-gallery__box-item--prev">previous</button>
+						<button class="m-gallery__box-btn-item m-gallery__box-item--next">next</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="m-resume modal" id="m-resume">
+		<div class="m-resume__item">
+			<div class="m-resume__item-head">
+				<div class="m-resume__item-close-btn" data-close="">
+					<img src="images/m-resume/close.svg" alt="">
+				</div>
+				<div class="m-resume__title">resume</div>
+				<div class="m-resume__btn-box">
+					<div class="m-resume__btn-wrapper">
+						<button class="m-resume__btn m-resume__btn--pdf">download pdf</button>
+					</div>
+					<div class="m-resume__btn-wrapper">
+						<button class="m-resume__btn m-resume__btn--print">print</button>
+					</div>
+				</div>
+			</div>
+			<div class="m-resume__item-body">
+				<div class="m-resume__unit">
+					<div class="m-resume__unit-title m-resume__body-title">experience</div>
+					<div class="m-resume__unit-col">
+						<div class="m-resume__unit-col-date">2017 - <span>present</span></div>
+						<div class="m-resume__unit-col-title">Freelancer</div>
+						<div class="m-resume__unit-col-subtitle">Art Director</div>
+						<div class="m-resume__unit-col-par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+							accusantium voluptatem dolor mollitia consectetur ratione cum beatae porro culpa laboriosam nam, eveniet,
+							est ut quo sint eum? Ullam voluptatem amet qui perspiciatis commodi dolores rerum, repudiandae architecto!
+							Odio quia cupiditate cum qui ullam, voluptatem maiores?</div>
+					</div>
+					<div class="m-resume__unit-col">
+						<div class="m-resume__unit-col-date">2016 - 2017</div>
+						<div class="m-resume__unit-col-title">The Best Agency</div>
+						<div class="m-resume__unit-col-subtitle">Art Director</div>
+						<div class="m-resume__unit-col-par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+							accusantium voluptatem dolor mollitia consectetur ratione cum beatae porro culpa laboriosam nam, eveniet,
+							est ut quo sint eum? Ullam voluptatem am</div>
+					</div>
+					<div class="m-resume__unit-col">
+						<div class="m-resume__unit-col-date">2014 - 2016</div>
+						<div class="m-resume__unit-col-title">Better Agency</div>
+						<div class="m-resume__unit-col-subtitle">Swnior UI/UX Designer</div>
+						<div class="m-resume__unit-col-par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+							accusantium voluptatem dolor mollitia consectetur ratione cum beatae porro culpa laboriosam nam, eveniet,
+							est ut quo sint eum? Ullam voluptatem amet qui perspiciatis commodi dolores rerum, repudiandae architecto!
+							Odio quia cupiditate cum qui ullam, voluptatem maiores?
+							am voluptatem amet qui perspiciatis commodi dolores rerum, repudiandae architecto!
+							Odio quia cupiditate cum qui ullam, voluptatem maiore</div>
+					</div>
+					<!-- <div class="m-resume__unit-col">
+						<div class="m-resume__unit-col-date">2012 - 2014</div>
+						<div class="m-resume__unit-col-title">Good Agency</div>
+						<div class="m-resume__unit-col-subtitle">UI/UX Designer</div>
+						<div class="m-resume__unit-col-par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+							accusantium voluptatem dolor mollitia consectetur ratione cum beatae porro culpa laboriosam nam, eveniet,
+							est ut quo sint eum? Ullam voluptatem am</div>
+					</div> -->
+				</div>
+				<div class="m-resume__box">
+					<h3 class="m-resume__body-title">education</h3>
+					<div class="m-resume__box-col">
+						<div class="m-resume__box-col-date">2005 - 2010</div>
+						<div class="m-resume__box-col-profession">UI/UX Design</div>
+						<div class="m-resume__box-col-location">LA University USA</div>
+					</div>
+					<div class="m-resume__box-col">
+						<div class="m-resume__box-col-date">2002 - 2005</div>
+						<div class="m-resume__box-col-profession">UI/UX Design</div>
+						<div class="m-resume__box-col-location">LA Universit of Art, USA</div>
+					</div>
+					<div class="m-resume__box-col">
+						<div class="m-resume__box-col-title">skills</div>
+						<div class="m-resume__box-col-skills">
+							<div class="m-resume__box-col-skills-text">
+								<div class="m-resume__box-col-skills-text-item">UI/UX Design</div>
+								<div class="m-resume__box-col-skills-text-item">Ilustrator</div>
+								<div class="m-resume__box-col-skills-text-item">Photoshop</div>
+								<div class="m-resume__box-col-skills-text-item">Sketch</div>
+							</div>
+							<div class="m-resume__box-col-skills-graph">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+					</div>
+					<div class="m-resume__box-col-title">awards</div>
+					<div class="m-resume__box-col-awards-unit">
+						<div class="m-resuem__box-col-awards-unit-title">the best app interface</div>
+						<div class="m-resume__box-col-awrads-unit-subtitle">UI/UX Magazine</div>
+						<div class="m-resume__box-col-awards-unit-par">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos doloremque tenetur ipsa harum. Error,
+							accusamus culpa illum consequatur mollitia similique?
+						</div>
+					</div>
+					<div class="m-resume__box-col-awards-unit">
+						<div class="m-resuem__box-col-awards-unit-title">the best website</div>
+						<div class="m-resume__box-col-awrads-unit-subtitle">UI/UX Magazine</div>
+						<div class="m-resume__box-col-awards-unit-par">
+							Lorem elit. Quos doloremque tenetur ipsa harum. Error,
+							accusamus culpa illum consequatur mollitia similique?
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="m-resume__item-footer">
+				<div class="intro__btn-unit">
+					<button class="btn btn--hire">hire me</button>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 

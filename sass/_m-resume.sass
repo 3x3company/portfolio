@@ -1,0 +1,233 @@
+.m-resume 
+  position: fixed 
+  z-index: 200
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: rgba(0, 0, 0, .8)
+  display: flex
+  justify-content: center
+  align-items: center
+  opacity: 0
+  visibility: hidden
+
+.m-resume.show
+  opacity: 1
+  visibility: visible
+  transition: all .3s linear
+
+.m-resume__item 
+  background: white
+  padding: 50px 20px 30px
+  width: 800px
+  height: 900px
+  overflow-y: auto
+  position: relative  
+  .intro__btn-unit
+    text-align: center
+
+.m-resume__item-head 
+  margin: 0 0 30px
+
+.m-resume__item-close-btn 
+  width: 25px
+  height: 25px
+  position: absolute
+  top: 15px
+  right: 15px
+  img 
+    width: 100%
+    height: 100%
+  @media (min-width: 992.98px)
+    &:hover
+      transform: rotate(180deg)
+      transition: all .3s linear
+      cursor: pointer
+
+.m-resume__title 
+  font-size: 27px
+  font-weight: 700
+  text-transform: uppercase
+  text-align: center
+  margin: 0 0 50px
+  letter-spacing: 10px
+
+.m-resume__btn-box 
+  display: flex
+
+.m-resume__btn-wrapper
+  flex: 0 0 50%
+  padding: 0 7px
+
+.m-resume__btn 
+  font-size: 15px
+  background: white
+  border: 2px solid lightgray
+  border-radius: 2em
+  text-transform: uppercase
+  @media (min-width: 992.98px)
+    &:hover
+      background: black
+      color: white
+      transition: all .3s linear
+
+.m-resume__btn--pdf 
+  padding: .6em 1em
+  float: right
+
+.m-resume__btn--print
+  padding: .6em 3.5em
+
+.m-resume__item-body 
+  display: flex
+  position: relative
+  margin: 0 0 44px
+  &:after
+    content: ''
+    height: 100%
+    width: 2px
+    background: lightgray
+    position: absolute
+    top: 0
+    left: 50%
+
+.m-resume__unit 
+  flex: 0 0 50%
+  padding: 0 35px 0 0
+
+.m-resume__unit-title 
+  text-align: right
+
+.m-resume__body-title
+  font-size: 18px
+  font-weight: 700
+  text-transform: uppercase
+  margin: 0 0 30px
+
+.m-resume__unit-col 
+  text-align: right
+  &:not(:last-child)
+    margin: 0 0 55px
+
+.m-resume__unit-col-date 
+  font-size: 15px 
+  margin: 0 0 15px
+  text-decoration: underline
+  span 
+    font-weight: 700
+    text-transform: capitalize
+
+.m-resume__unit-col-title 
+  font-weight: 700
+  font-size: 16px
+  margin: 0 0 7px
+
+.m-resume__unit-col-subtitle 
+  font-size: 14px
+  font-style: italic
+  margin: 0 0 10px
+
+.m-resume__unit-col-par 
+  font-size: 13px
+  color: gray
+  line-height: 1.5
+
+//right col of unit-body-text======================================================
+.m-resume__box 
+  flex: 0 0 50%
+  padding: 0 0 0 35px
+
+.m-resume__box-col 
+  margin: 0 0 40px
+
+.m-resume__box-col-date 
+  @extend .m-resume__unit-col-date
+
+.m-resume__box-col-profession 
+  @extend .m-resume__unit-col-title 
+
+.m-resume__box-col-location 
+  font-size: 13px
+
+.m-resume__box-col-title 
+  font-size: 19px
+  font-weight: 700
+  text-transform: uppercase
+  margin: 0 0 30px
+
+.m-resume__box-col-skills 
+  display: flex
+
+.m-resume__box-col-skills-text 
+  flex: 0 0 40%
+
+.m-resume__box-col-skills-text-item 
+  font-size: 14px
+  color: gray
+  &:not(:last-child)
+    margin: 0 0 9px
+
+.m-resume__box-col-skills-graph 
+  flex: 0 0 60%
+  padding: 3px 0 0
+  span
+    width: 100%
+    height: 9px
+    background: lightgray
+    display: block
+    margin: 0 0 14px
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      background: gray
+  span:first-child
+    &:after 
+      width: 80%
+  span:nth-child(2)
+    &:after 
+      width: 90%
+  span:nth-child(3)
+    &:after 
+      width: 85%
+  span:last-child
+    &:after 
+      width: 70%
+
+.m-resume__box-col-awards-unit 
+  padding: 0 0 0 50px
+  &:not(:last-child)
+    margin: 0 0 60px
+
+.m-resuem__box-col-awards-unit-title 
+  font-style: 19px
+  font-weight: 700
+  text-transform: uppercase
+  margin: 0 0 10px
+  position: relative
+  &:before
+    content: '2016'
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: -50px
+    font-size: 12px
+    font-weight: 400
+    text-decoration: underline
+
+.m-resume__box-col-awrads-unit-subtitle 
+  font-size: 15px
+  font-style: italic
+  font-weight: 700
+  margin: 0 0 25px
+
+.m-resume__box-col-awards-unit-par 
+  line-height: 1.5
+  font-size: 14px
+  font-style: oblique
+
+ 

@@ -1,0 +1,171 @@
+.m-gallery 
+  position: fixed
+  top: 0
+  left: 0 
+  width: 100%
+  height: 100%
+  background: rgba(0, 0, 0, .8)
+  z-index: 200
+  opacity: 0
+  visibility: hidden
+
+.m-gallery.show
+  opacity: 1
+  visibility: visible
+  transition: all .3s linear
+
+.m-gallery__inner 
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: 100%
+
+.m-gallery__unit 
+  display: flex
+  width: 800px
+  height: 500px
+  background: white
+
+.m-gallery__img-box 
+  flex: 0 0 65% 
+  width: 65%
+  height: 500px
+
+.m-gallery__img-slider 
+  height: 500px
+  position: relative
+
+.m-gallery__img-slider-item 
+  position: relative
+  height: 500px
+  img 
+    position: absolute 
+    top: 0
+    left: 0
+    width: 100%
+    height: 100% 
+    object-fit: cover
+
+.m-gallery__text-box 
+  flex: 0 0 35%
+  position: relative
+  padding: 35px 10px 10px
+  display: flex
+  flex-flow: column nowrap
+
+.m-gallery__close-btn
+  position: absolute
+  top: 8px
+  right: 8px
+  cursor: pointer
+  width: 20px
+  height: 20px
+  img 
+    width: 100%
+    height: 100%
+  @media (min-width: 992.98px)
+    &:hover
+      transform: scale(1.1) rotate(180deg)
+      transition: all .3s linear
+
+.m-gallery__box-title 
+  font-size: 22px
+  text-transform: uppercase
+  font-weight: 700
+  margin: 0 0 10px
+
+.m-gallery__box-subtitle 
+  font-size: 13px
+  text-transform: uppercase
+  margin: 0 0 25px
+  span 
+    margin: 0 0 0 15px
+    padding: 0 0 0 15px
+    position: relative
+    &:after
+      content: ''
+      height: 100%
+      width: 2px
+      background: gray
+      position: absolute 
+      top: 0
+      left: 0
+
+.m-gallery__box-client 
+  text-transform: capitalize 
+  font-weight: 700
+  font-size: 17px
+  margin: 0 0 5px
+
+.m-gallery__box-client-value 
+  font-size: 14px
+  font-style: italic 
+  text-transform: capitalize
+  margin: 0 0 30px
+
+.m-gallery__box-text 
+  margin: 0 0 20px
+  flex: 1 0 auto
+  p 
+    font-size: 12px
+    line-height: 2
+    margin: 0 0 10px
+
+.m-gallery__box-btn 
+  display: flex
+  justify-content: space-between
+
+.m-gallery__box-btn-item 
+  text-transform: uppercase
+  background: none
+  position: relative
+  &:after
+    content: ''
+    position: absolute 
+    top: 50%
+    transform: translateY(-50%) rotate(45deg)
+    right: 0
+    height: 8px
+    width: 8px
+    border-top: 2px solid gray
+    border-right: 2px solid gray
+  @media (min-width: 992.98px)
+    &:hover
+      background: lightgray
+      transition: all .3s linear
+
+.m-gallery__box-item--prev 
+  padding: 0 0 0 10px
+  &:after 
+    transform: translateY(-50%) rotate(-133deg)
+    left: 0
+
+.m-gallery__box-item--next 
+  padding: 0 10px 0 0
+
+//slick slider =================================================================
+.m-gallery__img-slider
+  .slick-list
+    overflow: hidden 
+  .slick-track
+    display: flex
+  .slick-dots
+    position: absolute
+    bottom: 20px
+    left: 50%
+    transform: translateX(-50%)
+    display: flex
+    li 
+      &:not(:last-child)
+        margin: 0 10px 0 0
+      button
+        font-size: 0
+        width: 15px
+        height: 15px
+        border: 1px solid white
+        border-radius: 50%
+        background: black
+    li.slick-active
+      button
+        background: red
